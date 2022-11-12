@@ -56,8 +56,19 @@ No do serviço| Valor do serviço R$| Código do serviço| Descrição| Código 
 
 cad_servico = []
 
-def Menu():
-    print("\n{:-^66}".format(" MENU "))
+class Servico():
+    codigo = 0
+    descricao = " "
+
+class Servico_Prestado():
+    numero = 0
+    valor = 0
+    codigo_servico = 0
+    codigo_cliente = 0
+
+
+def Menu_Principal():
+    print("\n{:-^66}".format(" MENU PRINCIPAL"))
     print("\n[1] Pintura")
     print("[2] Jardinagem")
     print("[3] Faxina")
@@ -70,5 +81,5 @@ def Menu():
 
 
 def main():
-    Menu()
+    Menu_Principal()
 main()
