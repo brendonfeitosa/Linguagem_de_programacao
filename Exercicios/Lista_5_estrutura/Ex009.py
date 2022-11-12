@@ -54,26 +54,80 @@ No do serviço| Valor do serviço R$| Código do serviço| Descrição| Código 
 306| 200,00| 2| Jardinagem| 1'''
 
 
-cad_servico = []
-
-class Servico():
+class TipoServico():
     codigo = 0
     descricao = " "
 
-class Servico_Prestado():
+class ServicoPrestado():
     numero = 0
     valor = 0
     codigo_servico = 0
     codigo_cliente = 0
 
 
-def Menu_Principal():
-    print("\n{:-^66}".format(" MENU PRINCIPAL"))
-    print("\n[1] Pintura")
-    print("[2] Jardinagem")
-    print("[3] Faxina")
-    print("Reforma em Geral")
+def Menu(vet_servico):
+    while True:
+        print("\n{:*^66}".format(" CADASTRO DE SERVIÇOS "))
+        print('''\n1. Cadastrar os tipos de serviços
+2. Mostrar todos os tipos de serviço
+3. Cadastrar os serviços prestados
+4. Mostrar todos os serviços prestados
+5. Mostrar os serviços prestados em determinado dia
+6. Mostrar os serviços prestados dentro de um intervalo de valor
+7. Mostrar um relatório geral (separado por dia), que exiba, inclusive, a descrição do tipo do serviço
+8. Sair''')
+        op = int(input("\nDigite a opção desejada: "))
+        if op == 1:
+            p = TipoServico()
+            j = TipoServico()
+            f = TipoServico()
+            r = TipoServico()
+            print("\nCadastrar os tipos de serviço!")
+            print('''\nTipos de Serviço: 
+\n1. Pintura;
+2. Jardinagem;
+3. Faxina;
+4. Reforma em geral;''')
+            op_cad_serv = int(input("\nQual serviço deseja cadastrar? "))
+            while op_cad_serv == 1 or op_cad_serv == 2 or op_cad_serv == 3 or op_cad_serv == 4:
+                i = 0
+                if op_cad_serv == 1:
+                    while i < 1:
+                    #for i in range(1):
+                        print("\n{:*^60}".format(" Cadastro do serviço [PINTURA] "))
+                        p.codigo = int(input("\nDigite o código do serviço: "))
+                        p.descricao = input("Digite a descrição do serviço: ")
+                        i += 1
+                    vet_servico.append(p)
 
+                elif op_cad_serv == 2:
+                    for i in range(1):
+                        print("\n{:*^60}".format("Cadastro do serviço [JARDINAGEM]"))
+                        j.codigo = int(input("\nDigite o código do serviço: "))
+                        j.descricao = input("Digite a descrição do serviço: ")
+                    vet_servico.append(j)
+
+                elif op_cad_serv == 3:
+                    for i in range(1):
+                        print("\n{:*^60}".format("Cadastro do serviço [FAXINA]"))
+                        f.codigo = int(input("\nDigite o código do serviço: "))
+                        f.descricao = input("Digite a descrição do serviço: ")
+                    vet_servico.append(f)
+
+                elif op_cad_serv == 4:
+                    for i in range(1):
+                        print("\n{:*^60}".format("Cadastro do serviço [REFORMA EM GERAL]"))
+                        r.codigo = int(input("\nDigite o código do serviço: "))
+                        r.descricao = input("Digite a descrição do serviço: ")
+                    vet_servico.append(r)
+            print("\nProdutos Cadastrados!")
+            print(vet_servico)
+            return(vet_servico)
+
+                    
+
+
+                
 
 
 
@@ -81,5 +135,7 @@ def Menu_Principal():
 
 
 def main():
-    Menu_Principal()
+    matriz_servico = []
+    vetor_servico = []
+    Menu(vetor_servico)
 main()
