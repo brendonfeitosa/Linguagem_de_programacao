@@ -1,14 +1,9 @@
 '''9. (OPCIONAL A IMPLEMTAÇÃO) Uma empresa prestadora de serviços armazena informações sobre os serviços prestados. Sabe-se que a empresa pode realizar no máximo três serviços diariamente. É de interesse de sua direção manter um histórico mensal (30 dias) sobre os serviços prestados.
 A empresa realiza quatro tipos de serviços: 
-
 1) pintura; 
-
 2) jardinagem; 
-
 3) faxina e
-
 4) reforma em geral.
-
 Cada serviço realizado deve ser cadastrado com as seguintes informações: número do serviço, valor do serviço, código do serviço e código do cliente, **numa matriz 30x3 referente a estrutura Servico_prestado**.
 
 Cadastre/digite os quatro tipos de serviços (código e descrição) que a empresa poderá realizar. Para isso, utilize um vetor de quatro posições referente a **estrutura Tipo_servico**.
@@ -58,3 +53,20 @@ No do serviço| Valor do serviço R$| Código do serviço| Descrição| Código 
 280| 352,00| 1| Pintura| 2
 306| 200,00| 2| Jardinagem| 1'''
 
+cad_servico = []
+
+def Menu():
+    print("\n{:-^66}".format(" MENU "))
+    print("\n[1] Pintura")
+    print("[2] Jardinagem")
+    print("[3] Faxina")
+    print("Reforma em Geral")
+
+
+
+
+
+
+def main():
+    Menu()
+main()
