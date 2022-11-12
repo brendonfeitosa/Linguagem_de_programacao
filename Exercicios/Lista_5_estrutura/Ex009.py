@@ -53,6 +53,7 @@ No do serviço| Valor do serviço R$| Código do serviço| Descrição| Código 
 280| 352,00| 1| Pintura| 2
 306| 200,00| 2| Jardinagem| 1'''
 
+<<<<<<< Updated upstream
 cad_servico = []
 
 def Menu():
@@ -70,3 +71,6 @@ def Menu():
 def main():
     Menu()
 main()
+=======
+kcdksk 
+>>>>>>> Stashed changes
