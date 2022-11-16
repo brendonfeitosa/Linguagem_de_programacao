@@ -125,19 +125,6 @@ def Menu(vet_servico):
             return(vet_servico)
 
 
-
-            
-
-                    
-
-
-                
-
-
-
-
-
-
 def main():
     matriz_servico = []
     vetor_servico = []
